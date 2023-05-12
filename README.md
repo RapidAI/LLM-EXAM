@@ -35,3 +35,7 @@
 [文字报告分析测试题](ds-txt.md)
 
 
+## 中英文翻译
+
+[中英文互译](chinese-english.md)
+
