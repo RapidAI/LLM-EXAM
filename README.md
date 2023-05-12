@@ -37,5 +37,5 @@
 
 ## 中英文翻译
 
-[中英文互译](chinese-english.md)
+[中英文互译测试题](chinese-english.md)
 
