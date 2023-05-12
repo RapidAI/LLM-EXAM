@@ -27,6 +27,9 @@
 
 ## 数据分析（TXT2SQL)
 
-[数据分析测试题](ds.md)
+[SQL生成测试题](ds-txt2sql.md)
+
+
+[文字报告分析测试题](ds-txt.md)
 
 
