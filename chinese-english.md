@@ -14,5 +14,5 @@ GPT4:
 
 讯飞星火：
 ```
-将以下中文翻译成英文：穿衣需要适应天气变化，夏天你能穿多少穿多少，冬天你能穿多少穿多少。
+Clothing needs to be adapted to weather changes. In summer, wear as much clothing as you can; in winter, wear as much clothing as you can.
 ```
