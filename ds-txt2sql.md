@@ -20,3 +20,24 @@ Copy
 
 此查询将返回最近五天内工作量大于50的username和address。
 ```
+
+
+讯飞星火：
+```
+可以使用以下SQL语句来实现：
+
+        
+sql
+复制代码
+SELECT u.username, u.address 
+FROM userinfo u 
+INNER JOIN workload w ON u.userid = w.userid 
+WHERE w.workload > 50 AND w.workdate >= DATE_SUB(NOW(), INTERVAL 5 DAY)
+ORDER BY w.workdate DESC
+LIMIT 5;
+
+    
+解释一下上述SQL语句的各个部分：
+
+SELECT u.username, u.address FROM userinfo u INNER JOIN workload w ON u.userid = w.userid WHERE w.workload > 50 AND w.workdate >= DATE_SUB(NOW(), INTERVAL 5 DAY) ORDER BY w.workdate DESC LIMIT 5;:这个部分是查询语句，使用SELECT关键字选择需要查询的字段。首先从userinfo表和workload表中进行JOIN操作，将两个表关联起来，然后使用WHERE子句过滤出符合要求的数据。其中，w.workload > 50表示工作量大于50,w.workdate >= DATE_SUB(NOW(), INTERVAL 5 DAY)表示工作日期在最近五天内。最后使用ORDER BY子句按照工作日期倒序排序，并使用LIMIT子句限制查询结果的数量为5
+```
