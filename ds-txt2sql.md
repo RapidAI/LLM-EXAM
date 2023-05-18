@@ -41,3 +41,40 @@ LIMIT 5;
 
 SELECT u.username, u.address FROM userinfo u INNER JOIN workload w ON u.userid = w.userid WHERE w.workload > 50 AND w.workdate >= DATE_SUB(NOW(), INTERVAL 5 DAY) ORDER BY w.workdate DESC LIMIT 5;:这个部分是查询语句，使用SELECT关键字选择需要查询的字段。首先从userinfo表和workload表中进行JOIN操作，将两个表关联起来，然后使用WHERE子句过滤出符合要求的数据。其中，w.workload > 50表示工作量大于50,w.workdate >= DATE_SUB(NOW(), INTERVAL 5 DAY)表示工作日期在最近五天内。最后使用ORDER BY子句按照工作日期倒序排序，并使用LIMIT子句限制查询结果的数量为5
 ```
+
+2. 有一个用户表userinfo,包括字段username,userid,birthday,salary, address. 有一个工作量表 workload,包括字段userid,workload,workdate. 另一个表是defect, 包括userid, defectnum,defectdate. 请找到最近五天工作量大于50并且缺陷数小于4的人的名字和地址。
+
+ZiYa 13B
+```
+
+以下是解决问题的SQL代码：
+SELECT
+    username,
+    address
+FROM
+    userinfo
+WHERE
+    birthday BETWEEN CURDATE() - INTERVAL '5' DAY AND CURDATE()
+    AND salary > 50
+    AND userid IN
+    (
+        SELECT
+            userid
+        FROM
+            workload
+        WHERE
+            workload > 50
+            AND userid IN
+            (
+                SELECT
+                    userid
+                FROM
+                    defect
+                WHERE
+                    defectnum < 4
+            )
+    )
+ORDER BY
+    username ASC;
+    
+  ```
