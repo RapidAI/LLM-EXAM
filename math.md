@@ -3,7 +3,7 @@
 
 English version: 
 ```
- The chickens and rabbits in a cage have a total of 35 heads and 94 feet, how many chickens and rabbits are in the cage?
+ How many chickens and rabbits are in the same cage, with 35 heads and 94 feet?
 ```
 ChatGPT:
 ```
