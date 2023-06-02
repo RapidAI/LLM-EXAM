@@ -1,6 +1,10 @@
 
 1. 鸡兔同笼，共35只头，94只脚，问鸡兔各多少？
 
+English version: 
+```
+ The chickens and rabbits in a cage have a total of 35 heads and 94 feet, how many chickens and rabbits are in the cage?
+```
 ChatGPT:
 ```
 假设鸡的数量为x，兔的数量为y。因为每只鸡和兔都有一只头，所以有以下方程式：
